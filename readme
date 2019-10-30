@@ -1,0 +1,54 @@
+This is the readme for CSE Assignment-3 by Manvith Reddy - 2018101057
+
+The libraries that have been used are standard.(Readline library is only on some compilers
+and must be installed prior to using my shell.)
+
+To run:
+-> make
+-> ./a.out
+
+main.c
+        :          This file has the main shell implementation which calls the rest of the files
+                   to implement commands on the shell. This file also has some commands implementation
+                   like history, exit and some system calls.
+                   - input-output redirection
+                   - piping
+                   - setenv
+                   - jobs
+                   - bg,fg
+                   - ctrl-c, ctrl-z
+                   - command recall
+                   - cronjob
+                       <executable> <input file>
+
+<--------------------------------------------------------------------------------------------------->
+
+address.c
+        :           This file has two functions which is used to check current address and extract
+                    file name from full path
+
+<--------------------------------------------------------------------------------------------------->
+
+builtcommands.c
+        :           This file has three builtin functions such as pwd, cd and echo with full implementation
+                    as prescribed in the question.
+
+<--------------------------------------------------------------------------------------------------->
+
+input.c
+        :           This file has two functions which is used to seperate the string into commands, and the
+                    commands into various arguments and flags for the commands.
+
+<--------------------------------------------------------------------------------------------------->
+
+ls.c
+        :           This file has the full implementation of the ls command with support for -a, -l, -la
+                    flags along with support for files and directories.
+
+<--------------------------------------------------------------------------------------------------->
+
+pinfo.c
+        :           This file has the full implementation of pinfo command which displays process information
+                    of the shell by default or of any valid pid.
+
+<--------------------------------------------------------------------------------------------------->
