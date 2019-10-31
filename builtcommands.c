@@ -2,9 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<unistd.h>
-extern int size;
-extern int words;
-extern char *inputstrings[200];
+#include "builtcommands.h"
 void echo(){
      for(int i=1; i<words; i++){
           printf("%s ",inputstrings[i]);
