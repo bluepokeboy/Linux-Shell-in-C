@@ -23,7 +23,6 @@ void pinfo(char * path){
           snprintf(tempstr,size,"%d",procid);
           strcat(procfile,tempstr);
           strcat(symlink,tempstr);
-          //itoa(procid,tempstr,10)
           printf("pid -- %d\n", procid);
           strcat(procfile, "/stat");
           strcat(symlink, "/exe");
@@ -32,7 +31,6 @@ void pinfo(char * path){
      if(words==2){
           strcat(procfile,inputstrings[1]);
           strcat(symlink,inputstrings[1]);
-          //printf("%s\n",procfile);
           struct stat fileStat;
           if(stat(procfile, &fileStat) == -1 && errno == ENOENT){
               printf("There is no process with the input pid\n");
