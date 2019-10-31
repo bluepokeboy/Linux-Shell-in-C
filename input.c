@@ -14,13 +14,9 @@ extern char *outputredstrings[200];
 extern char *doutputredstrings[200];
 extern char *pipestrings[200];
 void inputsplit(char* input){
-     //printf("lol1\n");
      char *token=strtok(input,";");
-     //printf("%s\n",input);
      while(token!=NULL){
-          //strcpy(commands[numcom],token);
           commands[numcom]=token;
-          //printf("lol2\n");
           numcom++;
           token=strtok(NULL,";");
      }
