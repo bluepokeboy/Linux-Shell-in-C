@@ -7,14 +7,16 @@
 #include <readline/history.h>
 extern char username[200];
 extern char systemname[200];
+#define BBLUE "\x1B[1;34m"
+#define RESET "\x1B[0m"
 void currentadress(char *path, int lenpath, int size){
      char cwd[size];
      getcwd(cwd,size);
      if(strncmp(cwd,path,lenpath)==0){
-          fprintf(stderr, "<%s@%s:~%.*s>",username,systemname,size,cwd+lenpath);
+          printf( BBLUE "<%s@%s:~%.*s>" RESET ,username,systemname,size,cwd+lenpath);
      }
      else{
-          fprintf(stderr,"<%s@%s:%s>",username,systemname,cwd);
+          printf( BBLUE "<%s@%s:%s>" RESET ,username,systemname,cwd);
      }
 }
 
